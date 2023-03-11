@@ -1,23 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddDepartmentComponent } from './add-department/add-department.component';
-import { EditDepartmentComponent } from './edit-department/edit-department.component';
-import { ListDepartmentComponent } from './list-department/list-department.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-const routes: Routes = [
-  {
-    path:'add-department',
-    component:AddDepartmentComponent
-  },
-  {
-    path:"edit-department",
-    component:EditDepartmentComponent
-  },
-  {
-    path:"list-department",
-    component:ListDepartmentComponent
-  }
-];
+const routes: Routes = [ { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+
+{ path: 'dashboard', component: DashboardComponent },
+
+{ path: 'department', loadChildren: () => import('./department/department.module').then(m => m.DepartmentModule) },]; 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
