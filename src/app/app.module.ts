@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     HeaderComponent,
     SidenavComponent,
-    DashboardComponent
+    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    BrowserAnimationsModule 
       ],
   providers: [],
   bootstrap: [AppComponent]
