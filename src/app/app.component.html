@@ -1,10 +1,18 @@
-<<<<<<< HEAD
 
-
-
-
-=======
 <mat-drawer-container>
+
+  <mat-drawer mode="side" opened="true">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+
+
+<mat-drawer-content>
+  <app-header></app-header>
+  
+  <router-outlet></router-outlet>
+</mat-drawer-content>
+</mat-drawer-container> 
+
     <mat-drawer mode="side" [opened]="sideBarOpen">
       <!-- <mat-drawer mode="side" opened="true"> -->
       <app-sidenav></app-sidenav>
@@ -15,5 +23,5 @@
     </mat-drawer-content>
   </mat-drawer-container>
   <mat-slide-toggle>Toggle me!</mat-slide-toggle>
->>>>>>> 57c1488f7f6ab3ff5e803ffd488e486c22e115f1
 <router-outlet></router-outlet>
+

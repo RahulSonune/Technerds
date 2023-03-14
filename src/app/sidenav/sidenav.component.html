@@ -1,19 +1,27 @@
+<!--mat nav list :- use to create navigation list  -->
 <mat-nav-list>
-   <div class="logo py-4">
-     <img src="./assets/logo.svg" alt="Company Logo" />
-   </div>
-   <mat-divider></mat-divider>
-   <h2 matSubheader class="mt-2">APPLICATIONS</h2>
- 
-   <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/home">
-     <mat-icon>home</mat-icon> Home
-   </a> -->
-   <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">
-     <mat-icon>dashboard</mat-icon> Dashboard
-   </a>
-   <a mat-list-item> <mat-icon>edit</mat-icon> Link 3 </a>
-   <a mat-list-item> <mat-icon>edit</mat-icon> Link 4 </a>
-   <a mat-list-item> <mat-icon>edit</mat-icon> Link 5 </a>
-   <a mat-list-item> <mat-icon>edit</mat-icon> Link 6 </a>
- </mat-nav-list>
- 
+  <div class="logo ">
+    <img src=".\assets\ci.jpg" alt="Company Logo" 
+    style="height: 60px;margin-left: 20px;margin-top: 0px; width:fit-content"/>
+  </div>
+  <!-- mat divider :- use for styling line seperator's -->
+  <mat-divider></mat-divider>
+  <p matSubheader class="mt-2" style="color: rgb(128, 128, 128);margin-left: 20px;">Main Menu</p>
+
+<!-- mat expansion pannel :- angular directive used to create expandable details -->
+<mat-expansion-panel>
+  <!-- mat expansion pannel header :- used to control or collapse the panel -->
+<mat-expansion-panel-header>
+  <mat-panel-title style="font-size: larger;">
+    <i class="fa-solid fa-user-graduate"></i>
+          <span>Dashboard</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+      <!-- links -->
+      <mat-list><a routerLink="admin" class="abc">Admin Dashboard</a></mat-list>
+      <mat-list><a routerLink="student" class="abc">Student Dashboard</a></mat-list>
+      <mat-list><a routerLink="teacher" class="abc">Teacher Dashboard</a></mat-list>
+      <!-- <mat-list><a routerLink="view" class="abc">Student View</a></mat-list> -->
+  </mat-expansion-panel>
+
+</mat-nav-list>
